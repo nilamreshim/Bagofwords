@@ -19,8 +19,7 @@ for file in os.listdir(myPath):
 
     # step 3 :- pass this document to vectorizer
     vectorizer = CountVectorizer(stop_words=text.ENGLISH_STOP_WORDS)
-    # countvectorizer will take the document
-    # content and train
+    # countvectorizer will take the document content and train
     counts = vectorizer.fit_transform(document)
     bows = vectorizer.vocabulary_
     coo = scipy.sparse.coo_matrix(counts)
